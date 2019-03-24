@@ -1,0 +1,147 @@
+JFDML JFormDesigner: "6.0.6.2.195" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "hidemode 3"
+			"$columnConstraints": "[fill][fill][fill][fill][fill]"
+			"$rowConstraints": "[][][][][][][][][][][][][][][][][]"
+		} ) {
+			name: "mainPanel"
+			"background": new javax.swing.plaf.ColorUIResource( 238, 238, 238 )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "cykelPriser"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelVoksen"
+				"text": "Voksen"
+				"font": new java.awt.Font( "Segoe UI", 0, 14 )
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 2 2"
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spinnerVoksen"
+				"model": new javax.swing.SpinnerNumberModel( 0, 0, 10, 1 )
+				"foreground": sfield java.awt.Color darkGray
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelBarn"
+				"text": "Barn"
+				"font": new java.awt.Font( "Segoe UI", 0, 14 )
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 2 3"
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spinnerBarn"
+				"model": new javax.swing.SpinnerNumberModel( 0, 0, 10, 1 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 3"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "hundePriser"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 3"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelCykel"
+				"text": "Cykel"
+				"font": new java.awt.Font( "Segoe UI", 0, 14 )
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 2 4"
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spinnerCykel"
+				"model": new javax.swing.SpinnerNumberModel( 0, 0, 10, 1 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 4"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "barnePriser"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 4"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelHund"
+				"text": "Hund"
+				"font": new java.awt.Font( "Segoe UI", 0, 14 )
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 2 5"
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spinnerHund"
+				"model": new javax.swing.SpinnerNumberModel( 0, 0, 10, 1 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 5"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "voksenPriser"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 5"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelTillæg"
+				"text": "Tillæg"
+				"font": new java.awt.Font( "Segoe UI", 0, 14 )
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 2 6"
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spinnerTillæg2"
+				"model": new javax.swing.SpinnerNumberModel( 0, 0, 8, 1 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"foreground": new java.awt.Color( 255, 255, 255, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 6"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "totalPriser2"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 6"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelTotal2"
+				"text": "                 Total: "
+				"font": new java.awt.Font( "Segoe UI", 0, 14 )
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 7"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tillægsPriser2"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 7"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "kortKnap2"
+				"text": "Kort Betaling"
+				"foreground": sfield java.awt.Color black
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 12"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "møntKnap2"
+				"text": "Mønt Betal"
+				"foreground": sfield java.awt.Color black
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 12"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 30, 15 )
+			"size": new java.awt.Dimension( 490, 405 )
+		} )
+	}
+}

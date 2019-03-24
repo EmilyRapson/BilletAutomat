@@ -4,7 +4,7 @@ public class BilletAutomat {
 
 private int balance;
 private int pris;
-private int zone;
+private int zoner;
 private String BilletType;
 
 //   tom konstruktør
@@ -13,12 +13,18 @@ private String BilletType;
 
     }
 
+    public BilletAutomat(String billetType, int zoner)
+    {
+        this.BilletType = billetType;
+        this.zoner = zoner;
+    }
+
 //   konstruktør med 3 argumenter der skal sætte vores priser, billet typer og zoner;
-    public BilletAutomat (String billettype, int zone , int billetpris)
+    public BilletAutomat (String billettype, int zoner , int billetpris)
     {
         this.pris = billetpris;
         this.BilletType = billettype;
-        this.zone = zone;
+        this.zoner = zoner;
     }
 
 
