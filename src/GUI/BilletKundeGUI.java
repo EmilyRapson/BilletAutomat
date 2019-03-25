@@ -4,11 +4,11 @@
 package GUI;
 
 import BilletAutomat.*;
-
+import BilletAutomat.BilletAutomatKlasse;
 
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.plaf.*;
+
 import net.miginfocom.swing.*;
 
 /**
@@ -16,11 +16,14 @@ import net.miginfocom.swing.*;
  */
 public class BilletKundeGUI extends JPanel {
 
-    BilletAutomat voksenBillet = new BilletAutomat("VoksenBillet", 2 , 24);
-    BilletAutomat børneBillet = new BilletAutomat("BørneBillet", 1, 12);
-    BilletAutomat cykelBillet = new BilletAutomat("CykelBillet", 1, 12);
-    BilletAutomat hundeBillet = new BilletAutomat("HundeBillet", 1, 12);
-    BilletAutomat tillægsbillet = new BilletAutomat("TillægsBillet", 12);
+    BilletAutomatKlasse bt = new BilletAutomatKlasse();
+
+
+    BilletAutomatKlasse voksenBillet = new BilletAutomatKlasse("VoksenBillet", bt.getPris());
+    BilletAutomatKlasse børneBillet = new BilletAutomatKlasse("BørneBillet", 12);
+    BilletAutomatKlasse cykelBillet = new BilletAutomatKlasse("CykelBillet", 12);
+    BilletAutomatKlasse hundeBillet = new BilletAutomatKlasse("HundeBillet", 12);
+    BilletAutomatKlasse tillægsbillet = new BilletAutomatKlasse("TillægsBillet", 12);
 
 
     public static void main(String[] args)

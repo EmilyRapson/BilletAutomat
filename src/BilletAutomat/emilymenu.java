@@ -1,7 +1,7 @@
 package BilletAutomat;
 
 public class emilymenu {
-    package billetautomatfælles;
+
 
 import java.util.Scanner;
 

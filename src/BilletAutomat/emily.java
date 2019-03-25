@@ -1,7 +1,7 @@
 package BilletAutomat;
 
 public class emily {
-    package billetautomatfælles;
+
 
     /**
      * Model af en simpel billetautomat til enkeltbilletter med en fast pris.
