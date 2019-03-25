@@ -4,6 +4,9 @@
 
 package GUI;
 
+import BilletAutomat.*;
+
+
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.plaf.*;
@@ -13,6 +16,13 @@ import net.miginfocom.swing.*;
  * @author unknown
  */
 public class BilletKundeGUI extends JPanel {
+
+    BilletAutomat voksenBillet = new BilletAutomat("VoksenBillet", 2 , 24);
+    BilletAutomat børneBillet = new BilletAutomat("BørneBillet", 1, 12);
+    BilletAutomat cykelBillet = new BilletAutomat("CykelBillet", 1, 12);
+    BilletAutomat hundeBillet = new BilletAutomat("HundeBillet", 1, 12);
+    BilletAutomat tillægsbillet = new BilletAutomat("TillægsBillet", 12);
+
 
     public static void main(String[] args)
     {
@@ -34,23 +44,23 @@ public class BilletKundeGUI extends JPanel {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         // Generated using JFormDesigner Evaluation license - Farid Haiba
         mainPanel = new JPanel();
-        cykelPriser = new JTextField();
         labelVoksen = new JLabel();
         spinnerVoksen = new JSpinner();
+        voksenPriser = new JTextField();
         labelBarn = new JLabel();
         spinnerBarn = new JSpinner();
-        hundePriser = new JTextField();
+        barnePriser = new JTextField();
         labelCykel = new JLabel();
         spinnerCykel = new JSpinner();
-        barnePriser = new JTextField();
+        cykelPriser = new JTextField();
         labelHund = new JLabel();
         spinnerHund = new JSpinner();
-        voksenPriser = new JTextField();
+        hundePriser = new JTextField();
         labelTillæg = new JLabel();
         spinnerTillæg2 = new JSpinner();
-        totalPriser2 = new JTextField();
-        labelTotal2 = new JLabel();
         tillægsPriser2 = new JTextField();
+        labelTotal2 = new JLabel();
+        totalPriser2 = new JTextField();
         kortKnap2 = new JButton();
         møntKnap2 = new JButton();
 
@@ -68,6 +78,11 @@ public class BilletKundeGUI extends JPanel {
             mainPanel.setLayout(new MigLayout(
                 "hidemode 3",
                 // columns
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
                 "[fill]" +
                 "[fill]" +
                 "[fill]" +
@@ -91,7 +106,6 @@ public class BilletKundeGUI extends JPanel {
                 "[]" +
                 "[]" +
                 "[]"));
-            mainPanel.add(cykelPriser, "cell 4 2");
 
             //---- labelVoksen ----
             labelVoksen.setText("Voksen");
@@ -104,6 +118,7 @@ public class BilletKundeGUI extends JPanel {
             spinnerVoksen.setForeground(Color.darkGray);
             spinnerVoksen.setBackground(Color.white);
             mainPanel.add(spinnerVoksen, "cell 3 2");
+            mainPanel.add(voksenPriser, "cell 4 2");
 
             //---- labelBarn ----
             labelBarn.setText("Barn");
@@ -115,7 +130,7 @@ public class BilletKundeGUI extends JPanel {
             spinnerBarn.setModel(new SpinnerNumberModel(0, 0, 10, 1));
             spinnerBarn.setBackground(Color.white);
             mainPanel.add(spinnerBarn, "cell 3 3");
-            mainPanel.add(hundePriser, "cell 4 3");
+            mainPanel.add(barnePriser, "cell 4 3");
 
             //---- labelCykel ----
             labelCykel.setText("Cykel");
@@ -127,7 +142,7 @@ public class BilletKundeGUI extends JPanel {
             spinnerCykel.setModel(new SpinnerNumberModel(0, 0, 10, 1));
             spinnerCykel.setBackground(Color.white);
             mainPanel.add(spinnerCykel, "cell 3 4");
-            mainPanel.add(barnePriser, "cell 4 4");
+            mainPanel.add(cykelPriser, "cell 4 4");
 
             //---- labelHund ----
             labelHund.setText("Hund");
@@ -139,7 +154,7 @@ public class BilletKundeGUI extends JPanel {
             spinnerHund.setModel(new SpinnerNumberModel(0, 0, 10, 1));
             spinnerHund.setBackground(Color.white);
             mainPanel.add(spinnerHund, "cell 3 5");
-            mainPanel.add(voksenPriser, "cell 4 5");
+            mainPanel.add(hundePriser, "cell 4 5");
 
             //---- labelTillæg ----
             labelTillæg.setText("Till\u00e6g");
@@ -152,14 +167,14 @@ public class BilletKundeGUI extends JPanel {
             spinnerTillæg2.setBackground(Color.white);
             spinnerTillæg2.setForeground(Color.white);
             mainPanel.add(spinnerTillæg2, "cell 3 6");
-            mainPanel.add(totalPriser2, "cell 4 6");
+            mainPanel.add(tillægsPriser2, "cell 4 6");
 
             //---- labelTotal2 ----
             labelTotal2.setText("                 Total: ");
             labelTotal2.setFont(new Font("Segoe UI", Font.PLAIN, 14));
             labelTotal2.setForeground(Color.black);
             mainPanel.add(labelTotal2, "cell 3 7");
-            mainPanel.add(tillægsPriser2, "cell 4 7");
+            mainPanel.add(totalPriser2, "cell 4 7");
 
             //---- kortKnap2 ----
             kortKnap2.setText("Kort Betaling");
@@ -177,23 +192,23 @@ public class BilletKundeGUI extends JPanel {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     // Generated using JFormDesigner Evaluation license - Farid Haiba
     private JPanel mainPanel;
-    private JTextField cykelPriser;
     private JLabel labelVoksen;
     private JSpinner spinnerVoksen;
+    private JTextField voksenPriser;
     private JLabel labelBarn;
     private JSpinner spinnerBarn;
-    private JTextField hundePriser;
+    private JTextField barnePriser;
     private JLabel labelCykel;
     private JSpinner spinnerCykel;
-    private JTextField barnePriser;
+    private JTextField cykelPriser;
     private JLabel labelHund;
     private JSpinner spinnerHund;
-    private JTextField voksenPriser;
+    private JTextField hundePriser;
     private JLabel labelTillæg;
     private JSpinner spinnerTillæg2;
-    private JTextField totalPriser2;
-    private JLabel labelTotal2;
     private JTextField tillægsPriser2;
+    private JLabel labelTotal2;
+    private JTextField totalPriser2;
     private JButton kortKnap2;
     private JButton møntKnap2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables

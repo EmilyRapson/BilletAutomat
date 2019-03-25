@@ -5,16 +5,11 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
 			"$layoutConstraints": "hidemode 3"
-			"$columnConstraints": "[fill][fill][fill][fill][fill]"
+			"$columnConstraints": "[fill][fill][fill][fill][fill][fill][fill][fill][fill][fill]"
 			"$rowConstraints": "[][][][][][][][][][][][][][][][][]"
 		} ) {
 			name: "mainPanel"
 			"background": new javax.swing.plaf.ColorUIResource( 238, 238, 238 )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "cykelPriser"
-			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-				"value": "cell 4 2"
-			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "labelVoksen"
 				"text": "Voksen"
@@ -30,6 +25,11 @@ new FormModel {
 				"background": new java.awt.Color( 255, 255, 255, 255 )
 			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 				"value": "cell 3 2"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "voksenPriser"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 2"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "labelBarn"
@@ -47,7 +47,7 @@ new FormModel {
 				"value": "cell 3 3"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "hundePriser"
+				name: "barnePriser"
 			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 				"value": "cell 4 3"
 			} )
@@ -67,7 +67,7 @@ new FormModel {
 				"value": "cell 3 4"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "barnePriser"
+				name: "cykelPriser"
 			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 				"value": "cell 4 4"
 			} )
@@ -87,7 +87,7 @@ new FormModel {
 				"value": "cell 3 5"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "voksenPriser"
+				name: "hundePriser"
 			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 				"value": "cell 4 5"
 			} )
@@ -108,7 +108,7 @@ new FormModel {
 				"value": "cell 3 6"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "totalPriser2"
+				name: "tillægsPriser2"
 			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 				"value": "cell 4 6"
 			} )
@@ -121,7 +121,7 @@ new FormModel {
 				"value": "cell 3 7"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "tillægsPriser2"
+				name: "totalPriser2"
 			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 				"value": "cell 4 7"
 			} )
@@ -141,7 +141,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 30, 15 )
-			"size": new java.awt.Dimension( 490, 405 )
+			"size": new java.awt.Dimension( 450, 360 )
 		} )
 	}
 }
