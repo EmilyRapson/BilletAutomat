@@ -5,35 +5,37 @@ import java.util.Scanner;
 public class priser {
 
 
-    public int setVoksenpris(int Voksenpris) {
-            if (Voksenpris > 0) {
+    public int setVoksenpris(int voksenpris) {
+            if (voksenpris > 0) {
             Scanner consol = new Scanner(System.in);
-            Voksenpris = consol.nextInt();
+            voksenpris = consol.nextInt();
 
         }
-            return Voksenpris;
+            return voksenpris;
     }
 
-        public int setBornepris(int Bornepris) {
-                if (Bornepris > 0) {
+        public int setBornepris(int bornepris) {
+                if (bornepris > 0) {
                 Scanner consol = new Scanner(System.in);
-                Bornepris = consol.nextInt();
+                bornepris = consol.nextInt();
             }
-                return Bornepris;
+                return bornepris;
         }
-        public int setTillagpris(int Tillagpris) {
-             if (Tillagpris > 0) {
+
+        public int setTillagpris(int tillagpris) {
+             if (tillagpris > 0) {
                 Scanner consol = new Scanner(System.in);
-                Tillagpris = consol.nextInt();
+                tillagpris = consol.nextInt();
         }
-                return Tillagpris;
+                return tillagpris;
     }
-         public int setHundepris(int Hundepris) {
-            if (Hundepris > 0) {
+
+         public int setHundepris(int hundepris) {
+            if (hundepris > 0) {
             Scanner consol = new Scanner(System.in);
-            Hundepris = consol.nextInt();
+            hundepris = consol.nextInt();
         }
-            return Hundepris;
+            return hundepris;
     }
 
 }

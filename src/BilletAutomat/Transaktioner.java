@@ -5,4 +5,5 @@ public class Transaktioner {
     ArrayList <BilletAutomatKlasse> liste = new ArrayList<>();
 
 
+
 }

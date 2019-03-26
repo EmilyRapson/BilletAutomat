@@ -18,13 +18,13 @@ public class BilletKundeGUI extends JPanel {
 
     BilletAutomatKlasse bt = new BilletAutomatKlasse();
 
-
+/*
     BilletAutomatKlasse voksenBillet = new BilletAutomatKlasse("VoksenBillet", bt.getPris());
     BilletAutomatKlasse børneBillet = new BilletAutomatKlasse("BørneBillet", 12);
     BilletAutomatKlasse cykelBillet = new BilletAutomatKlasse("CykelBillet", 12);
     BilletAutomatKlasse hundeBillet = new BilletAutomatKlasse("HundeBillet", 12);
     BilletAutomatKlasse tillægsbillet = new BilletAutomatKlasse("TillægsBillet", 12);
-
+*/
 
     public static void main(String[] args)
     {
@@ -35,6 +35,8 @@ public class BilletKundeGUI extends JPanel {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
+
     }
 
 
