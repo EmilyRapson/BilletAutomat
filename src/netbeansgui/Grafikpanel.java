@@ -38,7 +38,18 @@ public class Grafikpanel extends javax.swing.JPanel {
 
         voksen = new javax.swing.JLabel();
         kortbetaling = new javax.swing.JButton();
+        barn = new javax.swing.JLabel();
+        tillæg = new javax.swing.JLabel();
+        spinnerVoksen = new javax.swing.JSpinner();
+        spinnerBarn = new javax.swing.JSpinner();
+        spinnerTillæg = new javax.swing.JSpinner();
+        hund = new javax.swing.JLabel();
+        spinnerhund = new javax.swing.JSpinner();
         tekstfeltVoksen = new javax.swing.JTextField();
+        tekstfeltBarn = new javax.swing.JTextField();
+        tekstfeltTillæg = new javax.swing.JTextField();
+        tekstfeltHund = new javax.swing.JTextField();
+        kontantbetaling = new javax.swing.JButton();
 
         voksen.setText("Voksen");
 
@@ -49,25 +60,51 @@ public class Grafikpanel extends javax.swing.JPanel {
             }
         });
 
-        tekstfeltVoksen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tekstfeltVoksenActionPerformed(evt);
-            }
-        });
+        barn.setText("Barn");
+
+        tillæg.setText("Tillæg");
+
+        hund.setText("Hund");
+
+        kontantbetaling.setText("Kontantbetaling");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(voksen)
-                        .addGap(53, 53, 53)
-                        .addComponent(tekstfeltVoksen, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(kortbetaling))
-                .addContainerGap(231, Short.MAX_VALUE))
+                        .addGap(25, 25, 25)
+                        .addComponent(kortbetaling)
+                        .addGap(60, 60, 60)
+                        .addComponent(kontantbetaling))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(hund)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(spinnerhund, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(tillæg)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(spinnerTillæg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(barn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(spinnerBarn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(voksen)
+                                .addGap(20, 20, 20)
+                                .addComponent(spinnerVoksen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(tekstfeltBarn, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tekstfeltVoksen, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tekstfeltTillæg, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
+                            .addComponent(tekstfeltHund, javax.swing.GroupLayout.Alignment.LEADING))))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -75,9 +112,28 @@ public class Grafikpanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(voksen)
-                    .addComponent(tekstfeltVoksen, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
-                .addComponent(kortbetaling)
+                    .addComponent(spinnerVoksen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tekstfeltVoksen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(barn)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(spinnerBarn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tekstfeltBarn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tillæg)
+                    .addComponent(spinnerTillæg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tekstfeltTillæg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hund)
+                    .addComponent(spinnerhund, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tekstfeltHund, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kortbetaling)
+                    .addComponent(kontantbetaling))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -98,14 +154,21 @@ public class Grafikpanel extends javax.swing.JPanel {
         */
     }//GEN-LAST:event_kortbetalingActionPerformed
 
-    private void tekstfeltVoksenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tekstfeltVoksenActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tekstfeltVoksenActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel barn;
+    private javax.swing.JLabel hund;
+    private javax.swing.JButton kontantbetaling;
     private javax.swing.JButton kortbetaling;
+    private javax.swing.JSpinner spinnerBarn;
+    private javax.swing.JSpinner spinnerTillæg;
+    private javax.swing.JSpinner spinnerVoksen;
+    private javax.swing.JSpinner spinnerhund;
+    private javax.swing.JTextField tekstfeltBarn;
+    private javax.swing.JTextField tekstfeltHund;
+    private javax.swing.JTextField tekstfeltTillæg;
     private javax.swing.JTextField tekstfeltVoksen;
+    private javax.swing.JLabel tillæg;
     private javax.swing.JLabel voksen;
     // End of variables declaration//GEN-END:variables
 }

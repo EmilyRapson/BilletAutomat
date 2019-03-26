@@ -17,16 +17,47 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="voksen" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Component id="tekstfeltVoksen" min="-2" pref="56" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="kortbetaling" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="kontantbetaling" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="kortbetaling" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="hund" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="spinnerhund" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="tillæg" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="spinnerTillæg" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="barn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="spinnerBarn" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="voksen" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="spinnerVoksen" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="tekstfeltBarn" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tekstfeltVoksen" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tekstfeltTillæg" alignment="0" pref="56" max="32767" attributes="0"/>
+                          <Component id="tekstfeltHund" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace pref="231" max="32767" attributes="0"/>
+              <EmptySpace pref="111" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -36,10 +67,34 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="voksen" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tekstfeltVoksen" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                  <Component id="spinnerVoksen" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tekstfeltVoksen" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="241" max="32767" attributes="0"/>
-              <Component id="kortbetaling" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="barn" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spinnerBarn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tekstfeltBarn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tillæg" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="spinnerTillæg" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tekstfeltTillæg" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="hund" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="spinnerhund" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tekstfeltHund" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="129" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="kortbetaling" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="kontantbetaling" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -59,10 +114,41 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kortbetalingActionPerformed"/>
       </Events>
     </Component>
+    <Component class="javax.swing.JLabel" name="barn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Barn"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="till&#xe6;g">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Till&#xe6;g"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSpinner" name="spinnerVoksen">
+    </Component>
+    <Component class="javax.swing.JSpinner" name="spinnerBarn">
+    </Component>
+    <Component class="javax.swing.JSpinner" name="spinnerTill&#xe6;g">
+    </Component>
+    <Component class="javax.swing.JLabel" name="hund">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hund"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSpinner" name="spinnerhund">
+    </Component>
     <Component class="javax.swing.JTextField" name="tekstfeltVoksen">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tekstfeltVoksenActionPerformed"/>
-      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tekstfeltBarn">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tekstfeltTill&#xe6;g">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tekstfeltHund">
+    </Component>
+    <Component class="javax.swing.JButton" name="kontantbetaling">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kontantbetaling"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
