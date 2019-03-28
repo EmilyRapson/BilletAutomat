@@ -3,9 +3,10 @@ package BilletAutomat;
 public class BilletAutomatKlasse {
 
 private int balance;
-private int pris;
-private int tillæg;
-private String BilletType;
+private int voksenpris;
+private int bornepris;
+
+
 
 //   tom konstruktør
     public BilletAutomatKlasse()
@@ -13,46 +14,47 @@ private String BilletType;
 
     }
 
-
-//   konstruktør med 3 argumenter der skal sætte vores priser, billet typer og tillæg;
-    public BilletAutomatKlasse(String billettype,  int billetpris)
+    public BilletAutomatKlasse(int voksenpris, int bornepris)
     {
-        this.pris = billetpris;
-        this.BilletType = billettype;
+        this.voksenpris = voksenpris;
+        this.bornepris = bornepris;
+    }
+
+    public void setVoksenpris(int voksenpris)
+    {
+        this.voksenpris = voksenpris;
+    }
+
+    public int getVoksenpris()
+    {
+        return voksenpris;
     }
 
 
-    public int setBalance(int balance)
+    public void setBornepris(int bornepris)
     {
-        this.balance = balance;
+        this.bornepris = bornepris;
+    }
 
+
+
+    public int getBornepris()
+    {
+        return bornepris;
+    }
+
+
+
+    public int setBalance(int beløb)
+    {
+        balance = balance + beløb;
         return balance;
     }
 
-    public int getBalance() {
+
+    public int getBalance()
+    {
         return balance;
     }
 
-    public int setPris(int pris)
-    {
-        this.pris = pris;
-
-        return pris;
-    }
-
-
-    public int getPris()
-    {
-        return pris;
-    }
-
-    public int setTillæg(int tillæg) {
-        this.tillæg = tillæg;
-
-        return tillæg;
-    }
-
-    public int getTillæg() {
-        return tillæg;
-    }
 }

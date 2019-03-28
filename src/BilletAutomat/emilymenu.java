@@ -1,12 +1,10 @@
-//package BilletAutomat;
-//
-//public class emilymenu {
-//
-//
-//import java.util.Scanner;
-//
-//    public class BilletAutomatFælles {
-//
+package BilletAutomat;
+
+public class emilymenu {
+
+}
+
+
 //        public static void main(String[] arg) {
 //            Billetautomat automaten = new Billetautomat(24, 12);
 //            int voksenpris = automaten.getVoksenBilletpris();
@@ -119,5 +117,5 @@
 //            }
 //        }
 //    }
-//
-//}
+
+

@@ -1,8 +1,8 @@
-//package BilletAutomat;
-//
-//public class emily {
-//
-//
+package BilletAutomat;
+
+public class emily {
+
+
 //    /**
 //     * Model af en simpel billetautomat til enkeltbilletter med en fast pris.
 //     */
@@ -117,8 +117,8 @@
 //        public int getAntalVoksenBilletterSolgt() {
 //            return antalVoksenBilletterSolgt;
 //        }
-//
-//    }
-//
-//
-//
+
+    }
+
+
+

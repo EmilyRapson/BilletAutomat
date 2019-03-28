@@ -7,6 +7,7 @@ package netbeansgui;
 
 import BilletAutomat.BilletAutomatKlasse;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -171,4 +172,34 @@ public class Grafikpanel extends javax.swing.JPanel {
     private javax.swing.JLabel tillæg;
     private javax.swing.JLabel voksen;
     // End of variables declaration//GEN-END:variables
+
+
+
+
+
+    public void catchValueFromspinnerVoksen()
+    {
+        tekstfeltVoksen.setText(spinnerVoksen.getValue().toString());
+        add(tekstfeltVoksen);
+    }
+
+
+    public static void main(String[] arg)
+    {
+        Grafikpanel panel = new Grafikpanel();        // opret panelet
+        panel.catchValueFromspinnerVoksen();
+        panel.tekstfeltVoksen.add(panel.spinnerVoksen);
+        JFrame vindue = new JFrame("Grafikpanel");    // opret et vindue på skærmen
+        vindue.add( panel );                          // vis panelet i vinduet
+
+        vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // reagér på luk
+        vindue.setSize(850,470);                       // sæt vinduets størrelse
+        vindue.pack();
+        vindue.setVisible(true);                      // åbn vinduet
+
+
+    }
 }
+
+
+

@@ -1,41 +1,62 @@
 package BilletAutomat;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Scanner;
 
-public class priser {
+public class priser{
 
 
-    public int setVoksenpris(int voksenpris) {
-            if (voksenpris > 0) {
-            Scanner consol = new Scanner(System.in);
-            voksenpris = consol.nextInt();
 
+    public HashMap<String, Integer> transaktioner = new HashMap<String, Integer>();
+
+    BilletAutomatKlasse bt = new BilletAutomatKlasse();
+
+
+
+    public void Voksen()
+    {
+
+        if (bt.getVoksenpris() > 0)
+        {
+            transaktioner.put(new Date() + " " + "Voken billet", bt.getBornepris());
         }
-            return voksenpris;
     }
 
-        public int setBornepris(int bornepris) {
-                if (bornepris > 0) {
-                Scanner consol = new Scanner(System.in);
-                bornepris = consol.nextInt();
-            }
-                return bornepris;
+    public void Borne()
+    {
+        if (bt.getBornepris() > 0)
+        {
+            transaktioner.put(new Date() + " Børne billet", bt.getBornepris());
         }
 
-        public int setTillagpris(int tillagpris) {
-             if (tillagpris > 0) {
-                Scanner consol = new Scanner(System.in);
-                tillagpris = consol.nextInt();
-        }
-                return tillagpris;
     }
 
-         public int setHundepris(int hundepris) {
-            if (hundepris > 0) {
-            Scanner consol = new Scanner(System.in);
-            hundepris = consol.nextInt();
+
+
+
+    public void setTransaktionsListe() throws IOException
+    {
+        Voksen();
+        Borne();
+
+        java.io.FileWriter fil = new java.io.FileWriter(" Transaktion.txt");
+        PrintWriter ud = new PrintWriter(fil);
+
+        ud.println("========== transaktioner pr " + new Date());
+
+        for (String liste : transaktioner.keySet())
+        {
+            ud.println(liste);
         }
-            return hundepris;
+        ud.println("==========");
+
+        ud.close();
     }
+
 
 }
+
+

@@ -3,6 +3,7 @@
  */
 package GUI;
 
+import javax.swing.plaf.*;
 import BilletAutomat.*;
 import BilletAutomat.BilletAutomatKlasse;
 
@@ -54,15 +55,6 @@ public class BilletKundeGUI extends JPanel {
         labelBarn = new JLabel();
         spinnerBarn = new JSpinner();
         barnePriser = new JTextField();
-        labelCykel = new JLabel();
-        spinnerCykel = new JSpinner();
-        cykelPriser = new JTextField();
-        labelHund = new JLabel();
-        spinnerHund = new JSpinner();
-        hundePriser = new JTextField();
-        labelTillæg = new JLabel();
-        spinnerTillæg2 = new JSpinner();
-        tillægsPriser2 = new JTextField();
         labelTotal2 = new JLabel();
         totalPriser2 = new JTextField();
         kortKnap2 = new JButton();
@@ -74,42 +66,42 @@ public class BilletKundeGUI extends JPanel {
 
             // JFormDesigner evaluation mark
             mainPanel.setBorder(new javax.swing.border.CompoundBorder(
-                    new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                            "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                            javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                            java.awt.Color.red), mainPanel.getBorder())); mainPanel.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
+                new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
+                    "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
+                    javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+                    java.awt.Color.red), mainPanel.getBorder())); mainPanel.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
             mainPanel.setLayout(new MigLayout(
-                    "hidemode 3",
-                    // columns
-                    "[fill]" +
-                            "[fill]" +
-                            "[fill]" +
-                            "[fill]" +
-                            "[fill]" +
-                            "[fill]" +
-                            "[fill]" +
-                            "[fill]" +
-                            "[fill]" +
-                            "[fill]",
-                    // rows
-                    "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]" +
-                            "[]"));
+                "hidemode 3",
+                // columns
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
+                "[fill]" +
+                "[fill]",
+                // rows
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]" +
+                "[]"));
 
             //---- labelVoksen ----
             labelVoksen.setText("Voksen");
@@ -135,43 +127,6 @@ public class BilletKundeGUI extends JPanel {
             spinnerBarn.setBackground(Color.white);
             mainPanel.add(spinnerBarn, "cell 3 3");
             mainPanel.add(barnePriser, "cell 4 3");
-
-            //---- labelCykel ----
-            labelCykel.setText("Cykel");
-            labelCykel.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-            labelCykel.setForeground(Color.black);
-            mainPanel.add(labelCykel, "cell 2 4");
-
-            //---- spinnerCykel ----
-            spinnerCykel.setModel(new SpinnerNumberModel(0, 0, 10, 1));
-            spinnerCykel.setBackground(Color.white);
-            mainPanel.add(spinnerCykel, "cell 3 4");
-            mainPanel.add(cykelPriser, "cell 4 4");
-
-            //---- labelHund ----
-            labelHund.setText("Hund");
-            labelHund.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-            labelHund.setForeground(Color.black);
-            mainPanel.add(labelHund, "cell 2 5");
-
-            //---- spinnerHund ----
-            spinnerHund.setModel(new SpinnerNumberModel(0, 0, 10, 1));
-            spinnerHund.setBackground(Color.white);
-            mainPanel.add(spinnerHund, "cell 3 5");
-            mainPanel.add(hundePriser, "cell 4 5");
-
-            //---- labelTillæg ----
-            labelTillæg.setText("Till\u00e6g");
-            labelTillæg.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-            labelTillæg.setForeground(Color.black);
-            mainPanel.add(labelTillæg, "cell 2 6");
-
-            //---- spinnerTillæg2 ----
-            spinnerTillæg2.setModel(new SpinnerNumberModel(0, 0, 8, 1));
-            spinnerTillæg2.setBackground(Color.white);
-            spinnerTillæg2.setForeground(Color.white);
-            mainPanel.add(spinnerTillæg2, "cell 3 6");
-            mainPanel.add(tillægsPriser2, "cell 4 6");
 
             //---- labelTotal2 ----
             labelTotal2.setText("                 Total: ");
@@ -202,15 +157,6 @@ public class BilletKundeGUI extends JPanel {
     private JLabel labelBarn;
     private JSpinner spinnerBarn;
     private JTextField barnePriser;
-    private JLabel labelCykel;
-    private JSpinner spinnerCykel;
-    private JTextField cykelPriser;
-    private JLabel labelHund;
-    private JSpinner spinnerHund;
-    private JTextField hundePriser;
-    private JLabel labelTillæg;
-    private JSpinner spinnerTillæg2;
-    private JTextField tillægsPriser2;
     private JLabel labelTotal2;
     private JTextField totalPriser2;
     private JButton kortKnap2;

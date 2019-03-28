@@ -12,7 +12,9 @@ public class BenytGrafikpanel
 
 		vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // reagér på luk
 		vindue.setSize(850,470);                       // sæt vinduets størrelse
+		vindue.pack();
 		vindue.setVisible(true);                      // åbn vinduet
+
 
     System.out.println("Vinduet blev åbnet");
     }
