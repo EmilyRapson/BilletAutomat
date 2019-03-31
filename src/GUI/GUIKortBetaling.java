@@ -3,15 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUIBillet;
+package GUI;
 
-import GUI.GUIMenu;
+import BT.Betaling;
+
+import javax.swing.*;
 
 /**
  *
  * @author s104659
  */
 public class GUIKortBetaling extends javax.swing.JFrame {
+
+    Betaling betaling = new Betaling();
 
     /**
      * Creates new form GUIKortBetaling
@@ -203,54 +207,139 @@ public class GUIKortBetaling extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private int k1;
+    private int k2;
+    private int k3;
+    private int k4;
+    private int k5;
+    private int k6;
+    private int k7;
+    private int k8;
+    private int k9;
+
+    //  set metode for ovenståene instans variabler/felter
+    public void setK1(int k1) { this.k1 = k1; }
+    public void setK2(int k2) { this.k2 = k2; }
+    public void setK3(int k3) { this.k3 = k3; }
+    public void setK4(int k4) { this.k4 = k4; }
+    public void setK5(int k5) { this.k5 = k5; }
+    public void setK6(int k6) { this.k6 = k6; }
+    public void setK7(int k7) { this.k7 = k7; }
+    public void setK8(int k8) { this.k8 = k8; }
+    public void setK9(int k9) { this.k9 = k9; }
+
+    //  get metode for ovenstående instans variabler
+    public int getK1() { return k1; }
+    public int getK2() { return k2; }
+    public int getK3() { return k3; }
+    public int getK4() { return k4; }
+    public int getK5() { return k5; }
+    public int getK6() { return k6; }
+    public int getK7() { return k7; }
+    public int getK8() { return k8; }
+    public int getK9() { return k9; }
+
 
     private void annulleringsKnapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_annulleringsKnapActionPerformed
         // TODO add your handling code here:
+            System.exit(0);
     }//GEN-LAST:event_annulleringsKnapActionPerformed
 
     private void godkendBetalingsKnapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_godkendBetalingsKnapActionPerformed
         // TODO add your handling code here:
+        String pin = pinkodeText.getText();
+        if (pin.equals("1"))
+        {
+            GUIBilletKvitering kv = new GUIBilletKvitering();
+            kv.setVisible(true);
+        }
+        else
+        {
+            String  e = "Forkert Pin kode Prøv igen";
+            JOptionPane.showMessageDialog(null, e);
+        }
+
     }//GEN-LAST:event_godkendBetalingsKnapActionPerformed
 
     private void knap1PinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap1PinActionPerformed
         // TODO add your handling code here:
+        setK1(1);
+        String et = Integer.toString(getK1());
+        pinkodeText.setText(et);
+        pinkodeText.getText();
     }//GEN-LAST:event_knap1PinActionPerformed
 
     private void knap2PinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap2PinActionPerformed
         // TODO add your handling code here:
+        setK2(2);
+        String to = Integer.toString(getK2());
+        pinkodeText.setText(to);
+        pinkodeText.getText();
     }//GEN-LAST:event_knap2PinActionPerformed
 
     private void knap3PinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap3PinActionPerformed
         // TODO add your handling code here:
+        setK3(3);
+        String tre = Integer.toString(getK3());
+        pinkodeText.setText(tre);
+        pinkodeText.getText();
     }//GEN-LAST:event_knap3PinActionPerformed
 
     private void knap4PinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap4PinActionPerformed
         // TODO add your handling code here:
+        setK4(4);
+        String fire = Integer.toString(getK4());
+        pinkodeText.setText(fire);
+        pinkodeText.getText();
     }//GEN-LAST:event_knap4PinActionPerformed
 
     private void knap5PinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap5PinActionPerformed
         // TODO add your handling code here:
+        setK5(5);
+        String fem = Integer.toString(getK5());
+        pinkodeText.setText(fem);
+        pinkodeText.getText();
     }//GEN-LAST:event_knap5PinActionPerformed
 
     private void Knap6PinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Knap6PinActionPerformed
         // TODO add your handling code here:
+        setK6(6);
+        String seks = Integer.toString(getK6());
+        pinkodeText.setText(seks);
+        pinkodeText.getText();
     }//GEN-LAST:event_Knap6PinActionPerformed
 
     private void knap7PinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap7PinActionPerformed
         // TODO add your handling code here:
+        setK7(7);
+        String syv = Integer.toString(getK7());
+        pinkodeText.setText(syv);
+        pinkodeText.getText();
     }//GEN-LAST:event_knap7PinActionPerformed
 
     private void knap8PinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap8PinActionPerformed
         // TODO add your handling code here:
+        setK8(8);
+        String otte = Integer.toString(getK8());
+        pinkodeText.setText(otte);
+        pinkodeText.getText();
     }//GEN-LAST:event_knap8PinActionPerformed
 
     private void knap9PinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap9PinActionPerformed
         // TODO add your handling code here:
+        setK9(9);
+        String ni = Integer.toString(getK9());
+        pinkodeText.setText(ni);
+        pinkodeText.getText();
     }//GEN-LAST:event_knap9PinActionPerformed
 
     /**
      * @param args the command line arguments
      */
+
+
+
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

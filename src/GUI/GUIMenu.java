@@ -7,10 +7,8 @@ package GUI;
 
 import BT.Betaling;
 import BT.BilletTyper;
-import BT.Kvitering;
-import GUIBillet.GUIKortBetaling;
 
-import javax.swing.*;
+
 
 /**
  *
@@ -33,7 +31,7 @@ public class GUIMenu extends javax.swing.JPanel {
 
     BilletTyper billetTyper = new BilletTyper(24, 12);
     Betaling betaling = new Betaling();
-    Kvitering kvitering = new Kvitering();
+
 
     private int k1krone;
     private int k2krone;
@@ -317,6 +315,7 @@ public class GUIMenu extends javax.swing.JPanel {
         GUIKortBetaling kb = new GUIKortBetaling();
         kb.setVisible(true);
 
+
     }//GEN-LAST:event_knapKortBetalingActionPerformed
 
 
@@ -404,7 +403,8 @@ public class GUIMenu extends javax.swing.JPanel {
         }
         else
         {
-            kvitering.udskrivBillet();
+            GUIBilletKvitering b = new GUIBilletKvitering();
+            b.setVisible(true);
         }
 
         return totalbalance;

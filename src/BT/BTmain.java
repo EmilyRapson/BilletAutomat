@@ -14,7 +14,7 @@ public class BTmain {
 
         GUIMenu panel = new GUIMenu();      // opret panelet
 
-        JFrame vindue = new JFrame("Grafikpanel");    // opret et vindue på skærmen
+        JFrame vindue = new JFrame("BorgenTrafik Selskab A/S ");    // opret et vindue på skærmen
         vindue.add( panel );                          // vis panelet i vinduet
 
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // reagér på luk
