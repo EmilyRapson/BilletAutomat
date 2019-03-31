@@ -3,7 +3,7 @@ package BT;
 public class Betaling extends BilletTyper{
 
 
- private int balance;
+    private int balance;
     private String kundeKode;
 
 

@@ -313,7 +313,7 @@ public class GUIMenu extends javax.swing.JPanel {
     }
 
     private void knapKortBetalingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knapKortBetalingActionPerformed
-        // TODO add your handling code here:
+
         GUIKortBetaling kb = new GUIKortBetaling();
         kb.setVisible(true);
 
@@ -321,7 +321,7 @@ public class GUIMenu extends javax.swing.JPanel {
 
 
     private void knap1KroneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap1KroneActionPerformed
-        // TODO add your handling code here:
+
          setK1krone(1);
          betaling.setBalance(getK1krone());
 
@@ -329,7 +329,7 @@ public class GUIMenu extends javax.swing.JPanel {
     }//GEN-LAST:event_knap1KroneActionPerformed
 
     private void knap2KronerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap2KronerActionPerformed
-        // TODO add your handling code here:
+
         setK2krone(2);
         betaling.setBalance(getK2krone());
 
@@ -337,7 +337,7 @@ public class GUIMenu extends javax.swing.JPanel {
     }//GEN-LAST:event_knap2KronerActionPerformed
 
     private void knap5KronerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap5KronerActionPerformed
-        // TODO add your handling code here:
+
         setK5krone(5);
         betaling.setBalance(getK5krone());
 
@@ -345,7 +345,7 @@ public class GUIMenu extends javax.swing.JPanel {
     }//GEN-LAST:event_knap5KronerActionPerformed
 
     private void knap10KronerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap10KronerActionPerformed
-        // TODO add your handling code here:
+
         setK10krone(10);
         betaling.setBalance(getK10krone());
 
@@ -353,7 +353,7 @@ public class GUIMenu extends javax.swing.JPanel {
     }//GEN-LAST:event_knap10KronerActionPerformed
 
     private void knap20KronerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap20KronerActionPerformed
-        // TODO add your handling code here:
+
         setK20krone(20);
 
         betaling.setBalance(getK20krone());
@@ -361,7 +361,7 @@ public class GUIMenu extends javax.swing.JPanel {
     }//GEN-LAST:event_knap20KronerActionPerformed
 
     private void knap100KronerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knap100KronerActionPerformed
-        // TODO add your handling code here:
+
         setK100krone(100);
 
         betaling.setBalance(getK100krone());
@@ -369,7 +369,7 @@ public class GUIMenu extends javax.swing.JPanel {
     }//GEN-LAST:event_knap100KronerActionPerformed
 
     private void spinnerVoksenStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinnerVoksenStateChanged
-        // TODO add your handling code here:
+
         textVoksen.setText( voksenFunktion() );
         String totalPris = Integer.toString(textTotalFunktion());
         textTotal.setText(totalPris);
@@ -378,14 +378,14 @@ public class GUIMenu extends javax.swing.JPanel {
 
 
     private void spinnerBarnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinnerBarnStateChanged
-        // TODO add your handling code here:
+
         textBarn.setText( borneFunktion());
         String totalPris = Integer.toString(textTotalFunktion());
         textTotal.setText(totalPris);
     }//GEN-LAST:event_spinnerBarnStateChanged
 
     private void balanceTextfeltActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_balanceTextfeltActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_balanceTextfeltActionPerformed
 
 
@@ -404,7 +404,7 @@ public class GUIMenu extends javax.swing.JPanel {
         }
         else
         {
-            kvitering.udskrivBillet(true);
+            kvitering.udskrivBillet();
         }
 
         return totalbalance;

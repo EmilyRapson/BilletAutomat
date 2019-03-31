@@ -5,6 +5,8 @@
  */
 package GUIBillet;
 
+import GUI.GUIMenu;
+
 /**
  *
  * @author s104659
@@ -200,6 +202,7 @@ public class GUIKortBetaling extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
 
     private void annulleringsKnapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_annulleringsKnapActionPerformed
         // TODO add your handling code here:

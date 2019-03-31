@@ -12,7 +12,6 @@ public class BTmain {
     public static void main(String[] arg)
     {
 
-
         GUIMenu panel = new GUIMenu();      // opret panelet
 
         JFrame vindue = new JFrame("Grafikpanel");    // opret et vindue på skærmen
@@ -24,7 +23,6 @@ public class BTmain {
         vindue.setVisible(true);                      // åbn vinduet
 
         System.out.println("Vinduet blev åbnet");
-
 
     }
 
